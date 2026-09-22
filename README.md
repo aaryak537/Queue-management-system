@@ -48,8 +48,8 @@ notifications, and AI-powered waiting-time prediction.
 
 ## Team
 
-- Aarya Kadam - Project Lead / Android Development
-- Anushka Khengare - Team Member
+- Aarya Kadam 
+- Anushka Khengare 
 - Samruddhi Somvanshi
 - Arya Shelke
 

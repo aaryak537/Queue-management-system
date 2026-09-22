@@ -22,8 +22,6 @@
 <p align="center">
   <a href="#-overview">Overview</a> •
   <a href="#-features">Features</a> •
-  <a href="#-workflow">Workflow</a> •
-  <a href="#-architecture">Architecture</a> •
   <a href="#-tech-stack">Tech Stack</a> •
   <a href="#-setup">Setup</a>
 </p>
@@ -42,15 +40,9 @@
 * [💡 Proposed Solution](#-proposed-solution)
 * [🎯 Aim](#-aim)
 * [✨ Features](#-features)
-* [👤 Customer Module](#-customer-module)
-* [🛡️ Administrator Module](#️-administrator-module)
-* [🔄 Workflow](#-workflow)
-* [🏗️ System Architecture](#️-system-architecture)
 * [🛠️ Technology Stack](#️-technology-stack)
-* [🔥 Firebase Architecture](#-firebase-architecture)
 * [⚡ Real-Time Queue Updates](#-real-time-queue-updates)
 * [🔐 Security](#-security)
-* [📱 Screenshots](#-screenshots)
 * [📂 Project Structure](#-project-structure)
 * [⚙️ Setup](#️-setup)
 * [🚀 Getting Started](#-getting-started)
@@ -434,30 +426,6 @@ FlowQ incorporates security at the Firebase/backend level.
 * 🔒 HTTPS communication
 
 The administrator functionality is restricted to authorized users.
-
----
-
-# 📱 Screenshots
-
-> Replace the placeholders below with actual FlowQ screenshots as development progresses.
-
-## 🏠 User Application
-
-| Login                             | Home                            | Service Selection                       |
-| --------------------------------- | ------------------------------- | --------------------------------------- |
-| `![Login](screenshots/login.png)` | `![Home](screenshots/home.png)` | `![Services](screenshots/services.png)` |
-
-## 🎟️ Queue Experience
-
-| Digital Token                     | Live Queue                             | Waiting Time                         |
-| --------------------------------- | -------------------------------------- | ------------------------------------ |
-| `![Token](screenshots/token.png)` | `![Queue](screenshots/live-queue.png)` | `![Wait](screenshots/wait-time.png)` |
-
-## 🛡️ Administrator
-
-| Dashboard                                       | Token Control                             | Statistics                             |
-| ----------------------------------------------- | ----------------------------------------- | -------------------------------------- |
-| `![Dashboard](screenshots/admin-dashboard.png)` | `![Token](screenshots/token-control.png)` | `![Stats](screenshots/statistics.png)` |
 
 ---
 

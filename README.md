@@ -46,18 +46,6 @@ notifications, and AI-powered waiting-time prediction.
 - Git
 - GitHub
 
-## Project Structure
-
-FlowQ/
-│
-├── app/
-│   └── src/
-│
-├── gradle/
-├── README.md
-├── .gitignore
-└── settings.gradle
-
 ## Team
 
 - Aarya Kadam - Project Lead / Android Development

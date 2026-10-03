@@ -95,6 +95,23 @@
 
         </RadioGroup>
 
+        <!-- Admin Number: shown only when Admin is selected -->
+        <EditText
+            android:id="@+id/et_admin_number"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input"
+            android:hint="Admin Number"
+            android:inputType="number"
+            android:maxLength="12"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/flowq_text"
+            android:textColorHint="#9AA0B8"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
         <!-- Full Name -->
         <EditText
             android:id="@+id/et_full_name"

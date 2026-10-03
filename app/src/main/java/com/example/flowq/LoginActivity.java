@@ -263,7 +263,7 @@ public class LoginActivity extends AppCompatActivity {
 
             rbAdmin.setTextColor(
                     getResources().getColor(
-                            R.color.gray_text
+                            R.color.grey_text
                     )
             );
 

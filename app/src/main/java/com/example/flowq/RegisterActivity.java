@@ -36,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     private RadioButton rbUser;
     private RadioButton rbAdmin;
 
+    private EditText etAdminNumber;
     private EditText etFullName;
     private EditText etEmailAddress;
     private EditText etMobileNumber;
@@ -75,6 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
         rbUser = findViewById(R.id.rbUser);
         rbAdmin = findViewById(R.id.rbAdmin);
 
+        etAdminNumber = findViewById(R.id.et_admin_number);
         etFullName = findViewById(R.id.et_full_name);
         etEmailAddress = findViewById(R.id.et_email_address);
         etMobileNumber = findViewById(R.id.et_mobile_number);
@@ -102,6 +104,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                             selectedRole = "Admin";
 
+                            etAdminNumber.setVisibility(View.VISIBLE);
+
                             btnPrimary.setText(
                                     "Create Admin Account  →"
                             );
@@ -111,6 +115,9 @@ public class RegisterActivity extends AppCompatActivity {
                         } else {
 
                             selectedRole = "Customer";
+
+                            etAdminNumber.setText("");
+                            etAdminNumber.setVisibility(View.GONE);
 
                             btnPrimary.setText(
                                     "Create Account  →"
@@ -196,7 +203,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             rbAdmin.setTextColor(
                     getResources().getColor(
-                            R.color.gray_text
+                            R.color.grey_text
                     )
             );
 
@@ -208,10 +215,35 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void registerUser() {
 
+        String adminNumber =
+                etAdminNumber.getText()
+                        .toString()
+                        .trim();
+
         String fullName =
                 etFullName.getText()
                         .toString()
                         .trim();
+
+        if (selectedRole.equals("Admin") && TextUtils.isEmpty(adminNumber)) {
+
+            etAdminNumber.setError(
+                    "Enter your admin number"
+            );
+
+            etAdminNumber.requestFocus();
+            return;
+        }
+
+        if (selectedRole.equals("Admin") && !adminNumber.matches("[0-9]{4,12}")) {
+
+            etAdminNumber.setError(
+                    "Admin number must contain 4 to 12 digits"
+            );
+
+            etAdminNumber.requestFocus();
+            return;
+        }
 
         String email =
                 etEmailAddress.getText()
@@ -363,6 +395,7 @@ public class RegisterActivity extends AppCompatActivity {
         final String finalFullName = fullName;
         final String finalEmail = email;
         final String finalRole = selectedRole;
+        final String finalAdminNumber = adminNumber;
 
         /*
          * Firebase Authentication
@@ -393,7 +426,8 @@ public class RegisterActivity extends AppCompatActivity {
                                         finalFullName,
                                         finalEmail,
                                         finalMobile,
-                                        finalRole
+                                        finalRole,
+                                        finalAdminNumber
                                 );
 
                             } else {
@@ -430,7 +464,8 @@ public class RegisterActivity extends AppCompatActivity {
             String name,
             String email,
             String phone,
-            String role) {
+            String role,
+            String adminNumber) {
 
         Map<String, Object> userData =
                 new HashMap<>();
@@ -439,6 +474,10 @@ public class RegisterActivity extends AppCompatActivity {
         userData.put("email", email);
         userData.put("phone", phone);
         userData.put("role", role);
+
+        if (role.equalsIgnoreCase("Admin")) {
+            userData.put("adminNumber", adminNumber);
+        }
 
         usersRef.child(uid)
                 .setValue(userData)

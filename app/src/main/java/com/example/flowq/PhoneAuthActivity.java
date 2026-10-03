@@ -14,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -223,39 +226,42 @@ public class PhoneAuthActivity extends AppCompatActivity {
                 credential
         ).addOnCompleteListener(
                 this,
-                task -> {
+                new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
 
-                    if (task.isSuccessful()) {
+                        if (task.isSuccessful()) {
 
-                        FirebaseUser user =
-                                mAuth.getCurrentUser();
+                            FirebaseUser user =
+                                    mAuth.getCurrentUser();
 
-                        if (user != null) {
+                            if (user != null) {
 
-                            checkUserRole(
-                                    user.getUid()
-                            );
+                                checkUserRole(
+                                        user.getUid()
+                                );
+
+                            } else {
+
+                                showError(
+                                        "User information not found."
+                                );
+                            }
 
                         } else {
 
-                            showError(
-                                    "User information not found."
-                            );
+                            String message =
+                                    "Invalid OTP.";
+
+                            if (task.getException() != null) {
+
+                                message =
+                                        task.getException()
+                                                .getMessage();
+                            }
+
+                            showError(message);
                         }
-
-                    } else {
-
-                        String message =
-                                "Invalid OTP.";
-
-                        if (task.getException() != null) {
-
-                            message =
-                                    task.getException()
-                                            .getMessage();
-                        }
-
-                        showError(message);
                     }
                 }
         );

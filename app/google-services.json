@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1015074563427",
+    "firebase_url": "https://queue-73708-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "queue-73708",
+    "storage_bucket": "queue-73708.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015074563427:android:2d36e8f62d11ddc7645f56",
+        "android_client_info": {
+          "package_name": "com.example.flowq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015074563427-lsv0k4obcprn5u1ckag17vktoq78n6m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTAce4VhW8qlKgZcOZc1iBeCvof-V8k48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015074563427-lsv0k4obcprn5u1ckag17vktoq78n6m1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

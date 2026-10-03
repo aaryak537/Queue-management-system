@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="28dp"
+    android:paddingEnd="28dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="24dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:background="@drawable/bg_soft_card">
+
+        <TextView
+            android:id="@+id/illustrationBadge"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="⌁"
+            android:textColor="@color/flowq_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_outline_button"/>
+    </FrameLayout>
+
+    <Space android:layout_width="1dp" android:layout_height="26dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join Queues Digitally"
+        android:textColor="@color/flowq_navy"
+        android:textSize="27sp"
+        android:textStyle="bold"/>
+
+    <Space android:layout_width="1dp" android:layout_height="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find a service, join its queue from your phone, and keep your time for what matters."
+        android:textColor="@color/flowq_secondary"
+        android:textSize="15sp"
+        android:lineSpacingExtra="4dp"/>
+
+    <Space android:layout_width="1dp" android:layout_height="20dp"/>
+</LinearLayout>

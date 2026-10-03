@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="flowq_navy">#151B5B</color>
+    <color name="flowq_blue">#4A5CFF</color>
+    <color name="flowq_purple">#7B3FF2</color>
+    <color name="flowq_pink">#F56BBF</color>
+    <color name="flowq_bg">#F8F9FF</color>
+    <color name="flowq_text">#151B5B</color>
+    <color name="flowq_secondary">#68708D</color>
+    <color name="flowq_border">#E4E7F2</color>
+    <color name="flowq_success">#22C7A5</color>
+    <color name="grey_text">#666666</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>
